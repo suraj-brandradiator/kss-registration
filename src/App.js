@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Home from "./pages/Home";
 import Registration from "./pages/Registration";
+import Login from "./comp/Login";
 
 
 function App() {
@@ -94,7 +95,8 @@ function App() {
 
       <Router>
         <Routes>
-          <Route exact path='/' element={<Home />} />
+          <Route exact path='/' element={<Login />} />
+          <Route path='/dashboard' element={<Home />} />
           <Route path='/candidate/:id' element={<Registration />} />
         </Routes>
       </Router>
