@@ -4,7 +4,8 @@ import img from "../assets/img.png";
 import Footer from "./Footer";
 import CameraCapture from "./CameraCapture";
 
-const FormComponent = ({ formData, index, page }) => {
+const FormComponent = ({ formData }) => {
+  const page = 1;
   // const [formData, setFormData] = useState({
   //   name: "",
   //   email: "",

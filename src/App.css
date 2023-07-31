@@ -75,3 +75,26 @@ input {
 .spacer{
   margin-bottom: 620px;
 }
+
+tr{
+  border:none;
+}
+
+.searchBox{
+  display: flex;
+
+  justify-content: end;
+  /* padding:"10px"; */
+  /* margin-bottom:10px */
+}
+
+.searchInput{
+  border:2px solid gray;
+  border-radius:5px;
+  /* padding:10px; */
+  margin:10px;
+  font-size: 20px;
+  font-weight: 500;
+
+
+}

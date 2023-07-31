@@ -1,20 +1,25 @@
-import logo from "./logo.svg";
+
 import "./App.css";
-import FormComponent from "./comp/FormData";
-import { useEffect, useState } from "react";
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+
+import Home from "./pages/Home";
+import Registration from "./pages/Registration";
+
 
 function App() {
-  const [formDataArray, setFormDataArray] = useState([]);
-  const [page, setPage] = useState([1]);
-  const [totalCount, setTotalCount] = useState(0);
+  // const [formDataArray, setFormDataArray] = useState([]);
+  // const [page, setPage] = useState(1);
+  // const [totalCount, setTotalCount] = useState(0);
 
 
-  const getCount = async () => {
-    let res = await fetch(`http://localhost:8000/data`);
-    let res2 = await res.json();
-    setTotalCount(res2.length + 1)
+  // const getCount = async () => {
+  //   let res = await fetch(`http://localhost:8000/data`);
+  //   let res2 = await res.json();
+  //   setTotalCount(res2.length + 1)
 
-  };
+  // };
 
 
   // const getCount = async () => {
@@ -29,11 +34,11 @@ function App() {
 
   // https://bssa-pdfnew.vercel.app/data
 
-  const getData = async () => {
-    let res = await fetch(`http://localhost:8000/data?_page=${page}&_limit=1`);
-    let res2 = await res.json();
-    setFormDataArray(res2);
-  };
+  // const getData = async () => {
+  //   let res = await fetch(`http://localhost:8000/data?_page=${page}&_limit=1`);
+  //   let res2 = await res.json();
+  //   setFormDataArray(res2);
+  // };
 
   // const getData = async () => {
   //   let res = await fetch(`https://bssa-pdfnew.vercel.app/data?_page=${page}&_limit=1`);
@@ -52,37 +57,51 @@ function App() {
 
 
 
-  useEffect(() => {
-    getData();
-  }, [page]);
+  // useEffect(() => {
+  //   getData();
+  // }, [page]);
 
-  useEffect(() => {
-    getCount();
-  }, []);
-  // console.log(formDataArray);
-
-
-  const handlePreviousPage = () => {
-    if (page > 1) {
-      setPage(page - 1);
-    }
-  };
-
-  const handleNextPage = () => {
+  // useEffect(() => {
+  //   getCount();
+  // }, []);
+  // // console.log(formDataArray);
 
 
-    const totalPages = Math.ceil(totalCount / 1);
-    if (page < totalPages) {
-      setPage(page + 1);
-    }
+  // const handlePreviousPage = () => {
+  //   if (page > 1) {
+  //     setPage(page - 1);
+  //   }
+  // };
+
+  // const handleNextPage = () => {
+
+
+  //   const totalPages = Math.ceil(totalCount / 1);
+  //   if (page < totalPages) {
+  //     setPage(page + 1);
+  //   }
 
 
 
-  };
+  // };
 
   return (
     <div>
-      {formDataArray?.map((formData, index) => {
+
+
+
+
+
+      <Router>
+        <Routes>
+          <Route exact path='/' element={<Home />} />
+          <Route path='/candidate/:id' element={<Registration />} />
+        </Routes>
+      </Router>
+
+
+
+      {/* {formDataArray?.map((formData, index) => {
         return (
           <>
 
@@ -97,7 +116,7 @@ function App() {
         <button disabled={page == 1 ? true : ''} onClick={handlePreviousPage}>Prev</button>
         <spam>{page}</spam>
         <button disabled={page == totalCount ? true : ''} onClick={handleNextPage} >Next</button>
-      </div>
+      </div> */}
     </div>
   );
 }
