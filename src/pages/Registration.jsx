@@ -47,7 +47,7 @@ const Registration = () => {
   // };
 
   const getData = async () => {
-    let res = await fetch(`https://bssa-pdfnew.vercel.app/data`);
+    let res = await fetch(`http://localhost:8000/data`);
     let res2 = await res.json();
 
     const obj = res2.find((x) => x.adharNo == id);

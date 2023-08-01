@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "../styles/form.module.css";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
+import Header from "./Header";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -40,40 +41,43 @@ const Login = () => {
   };
 
   return (
-    <div className={styles["form-container"]}>
-      <form onSubmit={handleSubmit}>
-        <div className={styles["inner-container"]}>
-          <label for="email" className={styles["label"]}>
-            Email I'd :{" "}
-          </label>
-          <input
-            className={styles["input-container"]}
-            type="email"
-            name="username"
-            placeholder="email"
-            required={true}
-            value={email}
-            onChange={handleEmailChange}
-          />
-          <label for="password" className={styles["label"]}>
-            Password :{" "}
-          </label>
-          <input
-            className={styles["input-container"]}
-            type="password"
-            name="password"
-            placeholder="password"
-            cvalue={password}
-            onChange={handlePasswordChange}
-          />
-          <div className={styles["button-container"]}>
-            <button type="submit" className={styles["button"]}>
-              Login
-            </button>
+    <>
+      {/* <Header /> */}
+      <div className={styles["form-container"]}>
+        <form onSubmit={handleSubmit}>
+          <div className={styles["inner-container"]}>
+            <label for="email" className={styles["label"]}>
+              Email I'd :{" "}
+            </label>
+            <input
+              className={styles["input-container"]}
+              type="email"
+              name="username"
+              placeholder="email"
+              required={true}
+              value={email}
+              onChange={handleEmailChange}
+            />
+            <label for="password" className={styles["label"]}>
+              Password :{" "}
+            </label>
+            <input
+              className={styles["input-container"]}
+              type="password"
+              name="password"
+              placeholder="password"
+              cvalue={password}
+              onChange={handlePasswordChange}
+            />
+            <div className={styles["button-container"]}>
+              <button type="submit" className={styles["button"]}>
+                Login
+              </button>
+            </div>
           </div>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+    </>
   );
 };
 

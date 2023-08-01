@@ -184,7 +184,7 @@ const FormComponent = ({ formData }) => {
                       // allowfullscreen
                     ></iframe>
                   </div>
-                  <div>
+                  <div style={{ marginTop: "-10px" }}>
                     <CameraCapture setCheckAttendance={setCheckAttendance} />
                     {/* <img
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLLUBkJgwdSnMEx7TGzJ5p_2kz8JxCGv1bW3EKuBCa2w&s"
@@ -699,7 +699,7 @@ const FormComponent = ({ formData }) => {
             </tr> */}
           </tbody>
         </table>
-        <div className="spacer"></div>
+        {/* <div className="spacer"></div> */}
 
         {/* <br />
         <br />
@@ -707,13 +707,11 @@ const FormComponent = ({ formData }) => {
         <br />
         <br />
         <br /> */}
-        <Footer />
+        {/* <Footer /> */}
 
-        {formData.applyingAs == "Athlete / खिलाडी" ? (
+        {/* {formData.applyingAs == "Athlete / खिलाडी" ? (
           <div>
             <h3>Upload Certificate(s) / खेल प्रमाणपत्र अपलोड करें </h3>
-
-            {/* map here for all documents */}
 
             {dataArray?.map((i, index) => {
               return (
@@ -728,42 +726,17 @@ const FormComponent = ({ formData }) => {
                   ></iframe>
                 </div>
               );
-              // console.log(i, "mappppp");
             })}
-
-            {/* {formData?.certificate?.split(",")?.map((index) => {
-            return (
-              <div key={index}>
-                <iframe
-                  src={formData?.certificate?.split(",")[index] + "/preview"}
-                  width="100%"
-                  height="500px"
-                  allow="autoplay"
-                ></iframe>
-              </div>
-            );
-          })} */}
-
-            {/* <div>
-            <iframe
-              src={certificateUrl}
-              width="100%"
-              height="500px"
-              allow="autoplay"
-            ></iframe>
-          </div> */}
           </div>
         ) : (
           ""
-        )}
+        )} */}
 
-        <div>
+        {/* <div>
           <h3>
             Upload Certificates of Athletes Coached by you / प्रशिक्षित
             खिलाडियों का खेल प्रमाणपत्र अपलोड करें{" "}
           </h3>
-
-          {/* map here for all documents */}
 
           {coachdataArray?.map((i, index) => {
             return (
@@ -777,54 +750,12 @@ const FormComponent = ({ formData }) => {
                 ></iframe>
               </div>
             );
-            // console.log(i, "mappppp");
           })}
-
-          {/* {formData?.certificate?.split(",")?.map((index) => {
-            return (
-              <div key={index}>
-                <iframe
-                  src={formData?.certificate?.split(",")[index] + "/preview"}
-                  width="100%"
-                  height="500px"
-                  allow="autoplay"
-                ></iframe>
-              </div>
-            );
-          })} */}
-
-          {/* <div>
-            <iframe
-              src={certificateUrl}
-              width="100%"
-              height="500px"
-              allow="autoplay"
-            ></iframe>
-          </div> */}
-        </div>
-
-        {/* <div>
-        <label htmlFor="name">
-          Have you been felicitated through Khel Sammaan Samaroh earlier? / क्या
-          आप पहले खेल सम्मान समारोह के माध्यम से सम्मानित किये गए हैं
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData?.name}
-          onChange={handleChange}
-        />
-      </div> */}
-
-        {/* Add more fields here */}
-        {/* <div>
-        <button type="submit">Submit</button>
-      </div> */}
+        </div> */}
 
         {/* Upload Certificates of Athletes Coached by you /  प्रशिक्षित खिलाडियों का खेल प्रमाणपत्र अपलोड करें */}
 
-        <Footer page={page} />
+        {/* <Footer page={page} /> */}
 
         {/* <div className="footer">
           <div className="item"></div>

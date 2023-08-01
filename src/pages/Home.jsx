@@ -25,7 +25,7 @@ function Home() {
   const [searchList, setSearchList] = useState([]);
 
   const getCount = async () => {
-    let res = await fetch(`https://bssa-pdfnew.vercel.app/data`);
+    let res = await fetch(`http://localhost:8000/data`);
     let res2 = await res.json();
     setTotalCount(res2.length + 1);
   };
@@ -35,7 +35,7 @@ function Home() {
 
   const getData = async () => {
     let res = await fetch(
-      `https://bssa-pdfnew.vercel.app/data?_page=${page}&_limit=10`
+      ` http://localhost:8000/data?_page=${page}&_limit=10`
     );
     let res2 = await res.json();
     setFormDataArray(res2);
@@ -59,7 +59,7 @@ function Home() {
     }
 
     try {
-      let res = await fetch(`https://bssa-pdfnew.vercel.app/data`);
+      let res = await fetch(`http://localhost:8000/data`);
       let res2 = await res.json();
 
       let newArray = res2.filter(function (el) {
