@@ -42,7 +42,7 @@ th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
-  padding: 15px 5px;
+  padding: 5px 5px;
   font-size: small;
 }
 table {
@@ -53,7 +53,7 @@ input {
   width: 95%;
   outline: none;
   border: none;
-  padding: 10px 5px;
+  padding: 5px 5px;
   font-size: small;
 }
 

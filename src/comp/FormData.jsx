@@ -102,14 +102,14 @@ const FormComponent = ({ formData }) => {
 
   return (
     <>
-      <div style={{ margin: "auto", width: "100%" }}>
+      {/* <div style={{ margin: "auto", width: "100%" }}>
         <img
           src={img}
           alt="img"
           width="92%"
           style={{ marginLeft: "4%", marginTop: "2%", marginBottom: "2%" }}
         />
-      </div>
+      </div> */}
       <span
         style={{
           margin: "0 60px 0 0",
@@ -178,13 +178,13 @@ const FormComponent = ({ formData }) => {
                   <div>
                     <iframe
                       src={imgUrl}
-                      width="200"
-                      height="200"
+                      width="150"
+                      height="150"
                       // allow="autoplay"
                       // allowfullscreen
                     ></iframe>
                   </div>
-                  <div style={{ marginTop: "-10px" }}>
+                  <div>
                     <CameraCapture setCheckAttendance={setCheckAttendance} />
                     {/* <img
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLLUBkJgwdSnMEx7TGzJ5p_2kz8JxCGv1bW3EKuBCa2w&s"
@@ -215,21 +215,21 @@ const FormComponent = ({ formData }) => {
               </td>
             </tr>
 
-            <tr>
+            {/* <tr>
               <td>
                 <label htmlFor="email">Email Address</label>
               </td>
               <td>
                 {formData?.email}
-                {/* <input
+                 <input
                   type="email"
                   id="email"
                   name="email"
                   value={formData?.email}
                   onChange={handleChange}
-                /> */}
+                /> 
               </td>
-            </tr>
+            </tr> */}
 
             <tr>
               <td>
@@ -320,7 +320,7 @@ const FormComponent = ({ formData }) => {
                 {formData?.address}
               </td>
             </tr>
-            <tr>
+            {/* <tr>
               <td>
                 {" "}
                 <label htmlFor="applyingAs">
@@ -330,18 +330,18 @@ const FormComponent = ({ formData }) => {
               <td>
                 {" "}
                 {formData?.applyingAs}
-                {/* <input
+                <input
                   id="applyingAs"
                   name="applyingAs"
                   value={formData?.applyingAs}
                   onChange={handleChange}
-                /> */}
+                />
               </td>
-            </tr>
+            </tr> */}
 
             {formData.applyingAs == "Coach / प्रशिक्षक" ? (
               <>
-                <tr>
+                {/* <tr>
                   <td>
                     {" "}
                     <label htmlFor="organizationName">
@@ -351,16 +351,16 @@ const FormComponent = ({ formData }) => {
                   <td>
                     {" "}
                     {formData?.organizationName}
-                    {/* <input
-                  id="applyingAs"
-                  name="applyingAs"
-                  value={formData?.applyingAs}
-                  onChange={handleChange}
-                /> */}
+                    <input
+                      id="applyingAs"
+                      name="applyingAs"
+                      value={formData?.applyingAs}
+                      onChange={handleChange}
+                    />
                   </td>
-                </tr>
+                </tr> */}
 
-                <tr>
+                {/* <tr>
                   <td>
                     {" "}
                     <label htmlFor="medalWon">
@@ -371,18 +371,18 @@ const FormComponent = ({ formData }) => {
                   <td>
                     {" "}
                     {formData?.medalWon}
-                    {/* <input
+                    <input
                   id="applyingAs"
                   name="applyingAs"
                   value={formData?.applyingAs}
                   onChange={handleChange}
-                /> */}
+                />
                   </td>
-                </tr>
+                </tr> */}
 
                 {/* Do you have NIS Diploma/Certificate? /  क्या आपके पास एन.आई.एस डिप्लोमा/सर्टिफिकेट है? */}
 
-                <tr>
+                {/* <tr>
                   <td>
                     {" "}
                     <label htmlFor="nicDiploma">
@@ -393,18 +393,18 @@ const FormComponent = ({ formData }) => {
                   <td>
                     {" "}
                     {formData?.nicDiploma}
-                    {/* <input
-                  id="applyingAs"
-                  name="applyingAs"
-                  value={formData?.applyingAs}
-                  onChange={handleChange}
-                /> */}
+                    <input
+                      id="applyingAs"
+                      name="applyingAs"
+                      value={formData?.applyingAs}
+                      onChange={handleChange}
+                    />
                   </td>
-                </tr>
+                </tr> */}
 
                 {/* How many athletes from your sport won medals at national/international level or participated at International level? / आपके खेल प्रशिक्षण से कितने खिलाडियों ने राष्ट्रीय/अंतर्राष्ट्रीय स्तर पर पदक जीते या अंतर्राष्ट्रीय स्तर पर भाग लिया? */}
 
-                <tr>
+                {/* <tr>
                   <td>
                     {" "}
                     <label htmlFor="participatedLevel">
@@ -418,14 +418,14 @@ const FormComponent = ({ formData }) => {
                   <td>
                     {" "}
                     {formData?.participatedLevel}
-                    {/* <input
-                  id="applyingAs"
-                  name="applyingAs"
-                  value={formData?.applyingAs}
-                  onChange={handleChange}
-                /> */}
+                    <input
+                      id="applyingAs"
+                      name="applyingAs"
+                      value={formData?.applyingAs}
+                      onChange={handleChange}
+                    />
                   </td>
-                </tr>
+                </tr> */}
               </>
             ) : (
               ""
@@ -449,25 +449,25 @@ const FormComponent = ({ formData }) => {
               ""
             )}
 
-            {formData.applyingAs == "Athlete / खिलाडी" ? (
+            {/* {formData.applyingAs == "Athlete / खिलाडी" ? (
               <tr>
                 <td>
                   <label htmlFor="eventCategory">Event/Category </label>
                 </td>
                 <td>
                   {formData?.eventCategory}
-                  {/* <input
+                  <input
                   id="eventCategory"
                   name="eventCategory"
                   value={formData?.eventCategory}
                   onChange={handleChange}
-                /> */}
+                />
                 </td>
               </tr>
             ) : (
               ""
-            )}
-
+            )} */}
+            {/* 
             {formData.applyingAs == "Athlete / खिलाडी" ? (
               <tr>
                 <td>
@@ -484,11 +484,11 @@ const FormComponent = ({ formData }) => {
               </tr>
             ) : (
               ""
-            )}
+            )} */}
 
             {formData.applyingAs == "Athlete / खिलाडी" ? (
               <>
-                <tr>
+                {/* <tr>
                   <td>
                     <label htmlFor="levelOfParticipation">
                       Level of Participation (from April 2022 to March 2023) /
@@ -497,16 +497,16 @@ const FormComponent = ({ formData }) => {
                   </td>
                   <td>
                     {formData?.levelOfParticipation}
-                    {/* <input
-                  id="levelOfParticipation"
-                  name="levelOfParticipation"
-                  value={formData?.levelOfParticipation}
-                  onChange={handleChange}
-                /> */}
+                    <input
+                      id="levelOfParticipation"
+                      name="levelOfParticipation"
+                      value={formData?.levelOfParticipation}
+                      onChange={handleChange}
+                    />
                   </td>
-                </tr>
+                </tr> */}
 
-                <tr>
+                {/* <tr>
                   <td>
                     <label htmlFor="highestParticipation">
                       Merit of Highest Participation / भागीदारी की उच्चतम
@@ -515,15 +515,15 @@ const FormComponent = ({ formData }) => {
                   </td>
                   <td>
                     {formData?.highestParticipation}
-                    {/* <input
+                    <input
                   id="highestParticipation"
                   name="highestParticipation"
                   value={formData?.highestParticipation}
                   onChange={handleChange}
-                /> */}
+                />
                   </td>
-                </tr>
-                <tr>
+                </tr> */}
+                {/* <tr>
                   <td>
                     {" "}
                     <label htmlFor="event">
@@ -533,15 +533,15 @@ const FormComponent = ({ formData }) => {
                   <td>
                     {" "}
                     {formData?.event}
-                    {/* <input
+                    <input
                   type="text"
                   id="event"
                   name="event"
                   value={formData?.event}
                   onChange={handleChange}
-                /> */}
+                />
                   </td>
-                </tr>
+                </tr> */}
                 <tr>
                   <td>
                     <label htmlFor="fatherName">
@@ -632,7 +632,7 @@ const FormComponent = ({ formData }) => {
                 />
               </td>
             </tr>
-            <tr>
+            {/* <tr>
               <td>
                 <label htmlFor="kss">
                   {" "}
@@ -650,8 +650,8 @@ const FormComponent = ({ formData }) => {
                   onChange={handleChange}
                 />
               </td>
-            </tr>
-            <tr>
+            </tr> */}
+            {/* <tr>
               <td>
                 <label htmlFor="kss11">
                   {" "}
@@ -659,6 +659,22 @@ const FormComponent = ({ formData }) => {
                   cash reward amount / यदि हां, तो कृपया पुरस्कार के वर्ष, खेल
                   विधा और नकद पुरस्कार राशि का उल्लेख करें": "वर्ष- 2020-21
                 </label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  name="kss11"
+                  value={formData?.kss11}
+                  id="kss11"
+                  onChange={handleChange}
+                />
+                {formData?.kss11}
+              </td>
+            </tr> */}
+
+            <tr>
+              <td>
+                <label htmlFor="kss11"> नकद पुरस्कार राशि</label>
               </td>
               <td>
                 {/* <input
@@ -669,6 +685,43 @@ const FormComponent = ({ formData }) => {
                   onChange={handleChange}
                 /> */}
                 {formData?.kss11}
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label htmlFor="kss11">
+                  {" "}
+                  Travelling Allowance / यात्रा भत्ता
+                </label>
+              </td>
+              <td>
+                {/* <input
+                  type="text"
+                  name="kss11"
+                  value={formData?.kss11}
+                  id="kss11"
+                  onChange={handleChange}
+                /> */}
+                500 /- (Five hundred) only
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label htmlFor="kss11">
+                  {" "}
+                  Applicant signature / आवेदक का हस्ताक्षर
+                </label>
+              </td>
+              <td style={{ padding: "35px" }}>
+                {/* <input
+                  type="text"
+                  name="kss11"
+                  value={formData?.kss11}
+                  id="kss11"
+                  onChange={handleChange}
+                /> */}
               </td>
             </tr>
 

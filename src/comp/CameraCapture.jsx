@@ -21,12 +21,12 @@ const CameraCapture = ({ setCheckAttendance }) => {
   return (
     <div>
       {imageData ? (
-        <img src={imageData} alt="Captured" width="250" height="250" />
+        <img src={imageData} alt="Captured" width="150" height="150" />
       ) : (
         <Webcam
           audio={false}
-          height="250px"
-          width="250px"
+          height="200px"
+          width="200px"
           ref={webcamRef}
           screenshotFormat="image/jpeg"
         />
